@@ -1,14 +1,21 @@
 package demo1.model.entity;
 
+import java.io.Serializable;
+
 /**
  * @author cnmgb
  * @date 2022/3/29
  **/
-public class User {
+public class User implements Serializable {
 
-  public User(String username, double money) {
+  public User(Integer id, String username, double money) {
+    this.id = id;
     this.username = username;
     this.money = money;
+  }
+
+  public User() {
+    
   }
 
   public Integer getId() {
